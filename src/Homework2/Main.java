@@ -107,10 +107,9 @@ public class Main {
         var totalHours = 640;
         var hoursPerPerson = 8;
         var totalEmployees = totalHours / hoursPerPerson;
-        System.out.println(" Всего работников в компании " + totalEmployees + " человек ");
+        System.out.println("Всего работников в компании " + totalEmployees + " человек ");
         var NewTotalEmployees = totalEmployees + 94;
         var NewTotalHours = NewTotalEmployees * hoursPerPerson;
-        System.out.println(" Если в компании работает " + NewTotalEmployees + " человек, то всего " + NewTotalHours + " часа работы может быть поделено между сотрудниками");
+        System.out.println("Если в компании работает " + NewTotalEmployees + " человек, то всего " + NewTotalHours + " часа работы может быть поделено между сотрудниками");
     }
-
 }
