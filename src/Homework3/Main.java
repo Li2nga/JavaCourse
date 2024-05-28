@@ -102,9 +102,9 @@ public class Main {
         double loseLightDiet = (needLoseKilo * 1000) / (double)easyDietLossGramsDay;
         double loseHeavyDiet = (needLoseKilo * 1000) / (double)heavyDietLossGramsDay;
         double daysAverageLose = (needLoseKilo * 1000) / (double)((easyDietLossGramsDay + heavyDietLossGramsDay) / 2);
-        System.out.println(loseLightDiet + " дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм");
-        System.out.println(loseHeavyDiet + " дней уйдет на похудение, если спортсмен будет терять каждый день по 500 грамм");
-        System.out.println(daysAverageLose + " дней в среднем уйдет на похудение");
+        System.out.println((int) Math.ceil(loseLightDiet) + " дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм");
+        System.out.println((int) Math.ceil(loseHeavyDiet) + " дней уйдет на похудение, если спортсмен будет терять каждый день по 500 грамм");
+        System.out.println(Math.round(daysAverageLose * Math.pow(10, 2)) / Math.pow(10, 2) + " дней в среднем уйдет на похудение");
     }
 
     public static void task8() {
