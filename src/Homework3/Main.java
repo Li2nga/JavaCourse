@@ -14,29 +14,29 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1");
-        int A = 1000;
-        byte B = 100;
-        short C = 10000;
-        long D = 100000000;
-        float E = 1.11f;
-        double F = 1.11111111111;
-        System.out.println("Значение переменной A с типом int равно " + A);
-        System.out.println("Значение переменной B с типом byte равно " + B);
-        System.out.println("Значение переменной C с типом short равно " + C);
-        System.out.println("Значение переменной  D типом long равно " + D);
-        System.out.println("Значение переменной  E типом float равно " + E);
-        System.out.println("Значение переменной  F типом double равно " + F);
+        int a = 1000;
+        byte b = 100;
+        short c = 10000;
+        long d = 100000000;
+        float e = 1.11f;
+        double f = 1.11111111111;
+        System.out.println("Значение переменной A с типом int равно " + a);
+        System.out.println("Значение переменной B с типом byte равно " + b);
+        System.out.println("Значение переменной C с типом short равно " + c);
+        System.out.println("Значение переменной  D типом long равно " + d);
+        System.out.println("Значение переменной  E типом float равно " + e);
+        System.out.println("Значение переменной  F типом double равно " + f);
     }
 
     public static void task2() {
         System.out.println("Задача 2");
-        float A = 27.12f;
-        long B = 987678965549L;
-        float C = 2.786f;
-        short D = 569;
-        short E = -159;
-        short F = 27897;
-        byte I = 67;
+        float a = 27.12f;
+        long b = 987678965549L;
+        float c = 2.786f;
+        short d = 569;
+        short e = -159;
+        short f = 27897;
+        byte i = 67;
     }
 
     public static void task3() {
@@ -46,7 +46,7 @@ public class Main {
         byte studentsIn2Grade = 27;
         byte studentsIn3Grade = 30;
         byte totalStudents = (byte) (studentsIn1Grade + studentsIn2Grade + studentsIn3Grade);
-        int SheetsOfPaperPerStudent = totalSheets / totalStudents;
+        short SheetsOfPaperPerStudent = (short) (totalSheets / totalStudents);
         System.out.println("На каждого ученика рассчитано " + SheetsOfPaperPerStudent + " листов бумаги");
     }
 
@@ -66,12 +66,12 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задача 5");
-        byte wholeCansOfPaint = 120;
+        short wholeCansOfPaint = 120;
         byte consumptionWhitePerClass = 2;
         byte consumptionBrownPerClass = 4;
         byte totalClassesSchool = (byte) (wholeCansOfPaint / (consumptionWhitePerClass + consumptionBrownPerClass));
-        byte totalWhitePaint = (byte) (totalClassesSchool * consumptionWhitePerClass);
-        byte totalBrownPaint = (byte) (totalClassesSchool * consumptionBrownPerClass);
+        short totalWhitePaint = (short) (totalClassesSchool * consumptionWhitePerClass);
+        short totalBrownPaint = (short) (totalClassesSchool * consumptionBrownPerClass);
         System.out.println("В школе, где " + totalClassesSchool + " классов, нужно " + totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски");
 
     }
@@ -81,17 +81,17 @@ public class Main {
 
         byte totalBanana = 5;
         byte totalMilk100Ml = 2;
-        byte totaliIceCream = 2;
+        byte totalIceCream = 2;
         byte totalEggsRaw = 4;
 
-        byte BananaWeight = 80;
-        byte WeightMilk100Ml = 105;
-        byte iceCreamBarWeight = 100;
-        byte weightOneEgg = 70;
-        int breakfastWeightGrams = totalBanana * BananaWeight + totalMilk100Ml * WeightMilk100Ml + totaliIceCream * iceCreamBarWeight + totalEggsRaw * weightOneEgg;
+        short BananaWeight = 80;
+        short WeightMilk100Ml = 105;
+        short iceCreamBarWeight = 100;
+        short weightOneEgg = 70;
+        int breakfastWeightGrams = totalBanana * BananaWeight + totalMilk100Ml * WeightMilk100Ml + totalIceCream * iceCreamBarWeight + totalEggsRaw * weightOneEgg;
         float breakfastWeightKilograms = breakfastWeightGrams / 1000f;
-        System.out.println("Вес спортзавтрака " + breakfastWeightGrams + " грамм. ");
-        System.out.println("Вес спортзавтрака " + breakfastWeightKilograms + " килограмм. ");
+        System.out.println("Вес спортзавтрака " + breakfastWeightGrams + " грамм.");
+        System.out.println("Вес спортзавтрака " + breakfastWeightKilograms + " килограмм.");
     }
 
     public static void task7() {
@@ -99,36 +99,35 @@ public class Main {
         byte needLoseKilo = 7;
         short easyDietLossGramsDay = 250;
         short heavyDietLossGramsDay = 500;
-        int loseLightDiet = needLoseKilo * 1000 / easyDietLossGramsDay;
-        int loseHeavyDiet = needLoseKilo * 1000 / heavyDietLossGramsDay;
-        int daysAverageLose = needLoseKilo * 1000 / ((easyDietLossGramsDay + heavyDietLossGramsDay) / 2);
-        System.out.println(loseLightDiet);
-        System.out.println(loseHeavyDiet);
-        System.out.println(daysAverageLose);
+        double loseLightDiet = (needLoseKilo * 1000) / (double)easyDietLossGramsDay;
+        double loseHeavyDiet = (needLoseKilo * 1000) / (double)heavyDietLossGramsDay;
+        double daysAverageLose = (needLoseKilo * 1000) / (double)((easyDietLossGramsDay + heavyDietLossGramsDay) / 2);
+        System.out.println(loseLightDiet + " дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм");
+        System.out.println(loseHeavyDiet + " дней уйдет на похудение, если спортсмен будет терять каждый день по 500 грамм");
+        System.out.println(daysAverageLose + " дней в среднем уйдет на похудение");
     }
 
     public static void task8() {
         System.out.println("Задача 8");
-        int mashaSalary = 67760_00;
-        int denisSalary = 83690_00;
-        int christinaSalary = 76230_00;
+        long mashaSalary = 67760_00;
+        long denisSalary = 83690_00;
+        long christinaSalary = 76230_00;
         double promotion = 0.1;
-        int yearIncomeMasha = mashaSalary * 12;
-        int yearIncomeDenis = denisSalary * 12;
-        int yearIncomeChristina = christinaSalary * 12;
+        long yearIncomeMasha = mashaSalary * 12;
+        long yearIncomeDenis = denisSalary * 12;
+        long yearIncomeChristina = christinaSalary * 12;
 
         mashaSalary += Math.round(mashaSalary * promotion);
         denisSalary += Math.round(denisSalary * promotion);
         christinaSalary += Math.round(christinaSalary * promotion);
 
-        int yearIncomeMashaAfterPromotion = mashaSalary * 12;
-        int yearIncomeDenisAfterPromotion = denisSalary * 12;
-        int yearIncomeChristinaAfterPromotion = christinaSalary * 12;
+        long yearIncomeMashaAfterPromotion = mashaSalary * 12;
+        long yearIncomeDenisAfterPromotion = denisSalary * 12;
+        long yearIncomeChristinaAfterPromotion = christinaSalary * 12;
 
-        System.out.println("Маша теперь получает " + (mashaSalary / 100) + " рублей. Годовой доход вырос на " + (yearIncomeMashaAfterPromotion - yearIncomeMasha) / 100 + " руб. " + (yearIncomeMashaAfterPromotion - yearIncomeMasha) % 100 + " коп. ");
-        System.out.println("Денис теперь получает " + (denisSalary / 100) + " рублей. Годовой доход вырос на " + (yearIncomeDenisAfterPromotion - yearIncomeDenis) / 100 + " руб. " + (yearIncomeDenisAfterPromotion - yearIncomeDenis) % 100 + " коп. ");
-        System.out.println("Кристина теперь получает " + (christinaSalary / 100) + " рублей. Годовой доход вырос на " + ((yearIncomeChristinaAfterPromotion - yearIncomeChristina) / 100) + " руб. " + (yearIncomeChristinaAfterPromotion - yearIncomeChristina) % 100 + " коп. ");
+        System.out.println("Маша теперь получает " + (mashaSalary / 100) + " руб. " + (mashaSalary % 100) + " коп. Годовой доход вырос на " + (yearIncomeMashaAfterPromotion - yearIncomeMasha) / 100 + " руб. " + (yearIncomeMashaAfterPromotion - yearIncomeMasha) % 100 + " коп. ");
+        System.out.println("Денис теперь получает " + (denisSalary / 100) + " руб. " + (denisSalary % 100) + " коп. Годовой доход вырос на " + (yearIncomeDenisAfterPromotion - yearIncomeDenis) / 100 + " руб. " + (yearIncomeDenisAfterPromotion - yearIncomeDenis) % 100 + " коп. ");
+        System.out.println("Кристина теперь получает " + (christinaSalary / 100) + " руб. " + (christinaSalary % 100) + " коп. Годовой доход вырос на " + ((yearIncomeChristinaAfterPromotion - yearIncomeChristina) / 100) + " руб. " + (yearIncomeChristinaAfterPromotion - yearIncomeChristina) % 100 + " коп. ");
 
     }
-
 }
