@@ -13,8 +13,10 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1");
-        method1(20);
-        method1(15);
+        method1(-1);
+        method1(0);
+        method1(18);
+        method1(100);
     }
 
     public static void method1(int age) {
@@ -27,8 +29,9 @@ public class Main {
 
     public static void task2() {
         System.out.println("Задача 2");
-        method2(0);
-        method2(35);
+        method2(-50);
+        method2(5);
+        method2(50);
     }
 
     public static void method2(int outsideAirTemperature) {
@@ -41,8 +44,9 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
-        method3(100);
-        method3(59);
+        method3(0);
+        method3(60);
+        method3(200);
     }
 
     public static void method3(int carSpeed) {
@@ -55,12 +59,15 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
-        method4(1);
-        method4(4);
-        method4(10);
-        method4(21);
-        method4(29);
-        method4(80);
+        method4(-1);
+        method4(0);
+        method4(2);
+        method4(6);
+        method4(7);
+        method4(18);
+        method4(24);
+        method4(60);
+        method4(200);
     }
 
     public static void method4(int age) {
@@ -81,9 +88,11 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задача 5");
-        method5(3);
-        method5(12);
-        method5(16);
+        method5(-1);
+        method5(0);
+        method5(5);
+        method5(14);
+        method5(200);
     }
 
     public static void method5(int age) {
@@ -98,9 +107,11 @@ public class Main {
 
     public static void task6() {
         System.out.println("Задача 6");
-        method6(55);
-        method6(90);
+        method6(-1);
+        method6(0);
+        method6(60);
         method6(102);
+        method6(200);
     }
 
     public static void method6(int occupiedPlaces) {
@@ -117,18 +128,18 @@ public class Main {
 
     private static void task7() {
         System.out.println("Задача 7");
-        method7(7, 5, 10);
+        method7(5, 7, 10);
+        method7(10, 5, 7);
+        method7(7, 10, 5);
     }
 
     public static void method7(int one, int two, int three) {
         if (one > two && one > three) {
-            System.out.println(one + " самое большое число ");
+            System.out.println(one + " самое большое первое число ");
         } else if (two > three) {
-            System.out.println(two + " самое большое число ");
+            System.out.println(two + " самое большое второе число ");
         } else {
-            System.out.println(three + " самое большое число ");
+            System.out.println(three + " самое большое третье число ");
         }
     }
 }
-
-
