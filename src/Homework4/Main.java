@@ -1,19 +1,25 @@
 package Homework4;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
         task3();
-        task4();
-        task5();
-        task6();
-        task7();
+//        task4();
+//        task5();
+//        task6();
+//        task7();
     }
 
     public static void task1() {
         System.out.println("Задача 1");
-        method1(-1);
+        try {
+            method1(-1);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
         method1(0);
         method1(10);
         method1(18);
@@ -21,15 +27,22 @@ public class Main {
     }
 
     public static void method1(int age) {
-        if (age >= 18) {
-            System.out.println(" Если возраст человека равен " + age + ", то он совершеннолетний.");
-        } else {
+        if (age < 0) {
+            throw new IllegalArgumentException("Невозможный возраст");
+        } else if (age < 18) {
             System.out.println(" Если возраст человека равен " + age + ", нужно немного подождать.");
+        } else {
+            System.out.println(" Если возраст человека равен " + age + ", то он совершеннолетний.");
         }
     }
 
     public static void task2() {
         System.out.println("Задача 2");
+        try {
+            method2(-274);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
         method2(-50);
         method2(0);
         method2(5);
@@ -37,7 +50,9 @@ public class Main {
     }
 
     public static void method2(int outsideAirTemperature) {
-        if (outsideAirTemperature < 5) {
+        if (outsideAirTemperature < -273) {
+            throw new IllegalArgumentException("Несуществующая температура в градусах по Цельсию");
+        } else if (outsideAirTemperature < 5) {
             System.out.println(" На улице " + outsideAirTemperature + " градусов -  нужно надеть шапку ");
         } else {
             System.out.println(" На улице " + outsideAirTemperature + " градусов -  можно идти без шапки ");
@@ -46,6 +61,11 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
+        try {
+            method3(-45);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
         method3(0);
         method3(50);
         method3(60);
@@ -53,10 +73,12 @@ public class Main {
     }
 
     public static void method3(int carSpeed) {
-        if (carSpeed > 60) {
-            System.out.println(" Если скорость " + carSpeed + " км/ч, то  придется заплатить штраф ");
-        } else {
+        if (carSpeed < 0) {
+            throw new IllegalArgumentException("Несуществующая скорость");
+        }else if (carSpeed <= 60) {
             System.out.println(" Если скорость " + carSpeed + " км/ч, то можно ездить спокойно ");
+        } else {
+            System.out.println(" Если скорость " + carSpeed + " км/ч, то  придется заплатить штраф ");
         }
     }
 
