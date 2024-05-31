@@ -13,7 +13,11 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1");
-        int age = 21;
+        method1(20);
+        method1(15);
+    }
+
+    public static void method1(int age) {
         if (age >= 18) {
             System.out.println(" Если возраст человека равен " + age + ", то он совершеннолетний.");
         } else {
@@ -23,7 +27,11 @@ public class Main {
 
     public static void task2() {
         System.out.println("Задача 2");
-        int outsideAirTemperature = 0;
+        method2(0);
+        method2(35);
+    }
+
+    public static void method2(int outsideAirTemperature) {
         if (outsideAirTemperature < 5) {
             System.out.println(" На улице " + outsideAirTemperature + " градусов -  нужно надеть шапку ");
         } else {
@@ -33,7 +41,11 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
-        int carSpeed = 70;
+        method3(100);
+        method3(59);
+    }
+
+    public static void method3(int carSpeed) {
         if (carSpeed > 60) {
             System.out.println(" Если скорость " + carSpeed + " км/ч, то  придется заплатить штраф ");
         } else {
@@ -43,7 +55,15 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
-        int age = 70;
+        method4(1);
+        method4(4);
+        method4(10);
+        method4(21);
+        method4(29);
+        method4(80);
+    }
+
+    public static void method4(int age) {
         if (age < 2) {
             System.out.println(" Если возраст человека равен " + age + ", то ему нужно спать");
         } else if (age >= 2 && age <= 6) {
@@ -61,7 +81,12 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задача 5");
-        int age = 14;
+        method5(3);
+        method5(12);
+        method5(16);
+    }
+
+    public static void method5(int age) {
         if (age < 5) {
             System.out.println(" Если возраст ребенка равен " + age + ", то ему  нельзя кататься на аттракционе");
         } else if (age >= 5 && age < 14) {
@@ -73,9 +98,14 @@ public class Main {
 
     public static void task6() {
         System.out.println("Задача 6");
+        method6(55);
+        method6(90);
+        method6(102);
+    }
+
+    public static void method6(int occupiedPlaces) {
         int wagonCapacity = 102;
         int seating = 60;
-        int occupiedPlaces = 55;
         if (occupiedPlaces < seating) {
             System.out.println("В вагоне есть сидячии места");
         } else if (occupiedPlaces >= seating && occupiedPlaces < wagonCapacity) {
@@ -87,9 +117,10 @@ public class Main {
 
     private static void task7() {
         System.out.println("Задача 7");
-        int one = 7;
-        int two = 5;
-        int three = 9;
+        method7(7, 5, 10);
+    }
+
+    public static void method7(int one, int two, int three) {
         if (one > two && one > three) {
             System.out.println(one + " самое большое число ");
         } else if (two > three) {
