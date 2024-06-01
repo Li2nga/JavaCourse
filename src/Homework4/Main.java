@@ -3,6 +3,11 @@ package Homework4;
 public class Main {
     public static void main(String[] args) {
         task1();
+        try {
+            task1Star();
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
         task2();
         task3();
         task4();
@@ -32,6 +37,15 @@ public class Main {
         } else {
             System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний.");
         }
+    }
+
+    public static void task1Star() {
+        System.out.println("task1Star()");
+        method1(-1);
+        method1(0);
+        method1(10);
+        method1(18);
+        method1(100);
     }
 
     public static void task2() {
