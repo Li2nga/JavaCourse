@@ -1,6 +1,5 @@
 package Homework4;
 
-
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -52,9 +51,9 @@ public class Main {
         if (outsideAirTemperature < -273) {
             throw new IllegalArgumentException("Несуществующая температура в градусах по Цельсию");
         } else if (outsideAirTemperature < 5) {
-            System.out.println("На улице " + outsideAirTemperature + " градусов -  нужно надеть шапку ");
+            System.out.println("На улице " + outsideAirTemperature + " градусов -  нужно надеть шапку");
         } else {
-            System.out.println("На улице " + outsideAirTemperature + " градусов -  можно идти без шапки ");
+            System.out.println("На улице " + outsideAirTemperature + " градусов -  можно идти без шапки");
         }
     }
 
@@ -75,9 +74,9 @@ public class Main {
         if (carSpeed < 0) {
             throw new IllegalArgumentException("Несуществующая скорость");
         } else if (carSpeed <= 60) {
-            System.out.println("Если скорость " + carSpeed + " км/ч, то можно ездить спокойно ");
+            System.out.println("Если скорость " + carSpeed + " км/ч, то можно ездить спокойно");
         } else {
-            System.out.println("Если скорость " + carSpeed + " км/ч, то  придется заплатить штраф ");
+            System.out.println("Если скорость " + carSpeed + " км/ч, то  придется заплатить штраф");
         }
     }
 
@@ -187,25 +186,28 @@ public class Main {
     private static void task7() {
         System.out.println("Задача 7");
         method7(5, 7, 10);
+        method7(11, 7, 10);
+        method7(5, 11, 10);
+        method7(5, 7, 11);
         method7(10, 5, 10);
-        method7(0, 1, 1);
+        method7(2, 1, 1);
     }
 
     public static void method7(int one, int two, int three) {
         if (one == two && one == three) {
             System.out.println("все числа равны");
-        } else if (one == two && one > three) {
-            System.out.println(one + "," + two + " самое большое первое число и второе число ");
+        } else if (one > three && one == two) {
+            System.out.println(one + "," + two + " самое большое первое число и второе число");
         } else if (one > two && one == three) {
-            System.out.println(one + "," + three + " самое большое первое число и третье число ");
-        } else if (two == three) {
-            System.out.println(two + "," + three + " самое большое второе число и третье число ");
+            System.out.println(one + "," + three + " самое большое первое число и третье число");
         } else if (one > two && one > three) {
-            System.out.println(one + " самое большое первое число ");
+            System.out.println(one + " самое большое первое число");
+        } else if (two == three) {
+            System.out.println(two + "," + three + " самое большое второе число и третье число");
         } else if (two > three) {
-            System.out.println(two + " самое большое второе число ");
+            System.out.println(two + " самое большое второе число");
         } else {
-            System.out.println(three + " самое большое третье число ");
+            System.out.println(three + " самое большое третье число");
         }
     }
 }
