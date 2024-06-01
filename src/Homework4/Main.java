@@ -1,6 +1,5 @@
 package Homework4;
 
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -108,13 +107,13 @@ public class Main {
             throw new IllegalArgumentException("Невозможный возраст");
         } else if (age < 2) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно спать");
-        } else if (age >= 2 && age <= 6) {
+        } else if (age <= 6) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно в детский сад");
-        } else if (age > 6 && age <= 18) {
+        } else if (age <= 18) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно в школу");
-        } else if (age > 18 && age < 24) {
+        } else if (age < 24) {
             System.out.println("Если возраст человека равен " + age + ", то его место в университете");
-        } else if (age >= 24 && age < 60) {
+        } else if (age < 60) {
             System.out.println("Если возраст человека равен " + age + ", то ему пора ходить на работу");
         } else {
             System.out.println("Если возраст человека равен " + age + ", то он может отдохнуть");
@@ -135,20 +134,20 @@ public class Main {
         method5(14);
         method5(16);
         try {
-            method5(200);
+            method5(18);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
     }
 
     public static void method5(int age) {
-        if (age<0){
+        if (age < 0) {
             throw new IllegalArgumentException("Невозможный возраст");
         } else if (age < 5) {
             System.out.println("Если возраст ребенка равен " + age + ", то ему  нельзя кататься на аттракционе");
-        } else if (age >= 5 && age < 14) {
+        } else if (age < 14) {
             System.out.println("Если возраст ребенка равен " + age + ", то ему  можно кататься на аттракционе в сопровождении взрослого");
-        } else if (age >=18) {
+        } else if (age >= 18) {
             throw new IllegalArgumentException("Возраст ребенка не может быть больше 17 лет");
         } else {
             System.out.println("Если возраст ребенка равен " + age + ", то ему  можно кататься на аттракционе без сопровождения взрослого");
@@ -173,13 +172,13 @@ public class Main {
     public static void method6(int occupiedPlaces) {
         int wagonCapacity = 102;
         int seating = 60;
-        if (occupiedPlaces<0){
+        if (occupiedPlaces < 0) {
             throw new IllegalArgumentException("Количество занятых мест не может быть отрицательным");
         }
         if (occupiedPlaces < seating) {
-            System.out.println("В вагоне есть сидячии места");
-        } else if (occupiedPlaces >= seating && occupiedPlaces < wagonCapacity) {
-            System.out.println("В вагоне есть стоячии места");
+            System.out.println("В вагоне есть сидячие места");
+        } else if (occupiedPlaces < wagonCapacity) {
+            System.out.println("В вагоне есть стоячие места");
         } else {
             System.out.println("В вагоне мест нет");
         }
@@ -188,12 +187,20 @@ public class Main {
     private static void task7() {
         System.out.println("Задача 7");
         method7(5, 7, 10);
-        method7(10, 5, 7);
-        method7(7, 10, 5);
+        method7(10, 5, 10);
+        method7(0, 1, 1);
     }
 
     public static void method7(int one, int two, int three) {
-        if (one > two && one > three) {
+        if (one == two && one == three) {
+            System.out.println("все числа равны");
+        } else if (one == two && one > three) {
+            System.out.println(one + "," + two + " самое большое первое число и второе число ");
+        } else if (one > two && one == three) {
+            System.out.println(one + "," + three + " самое большое первое число и третье число ");
+        } else if (two == three) {
+            System.out.println(two + "," + three + " самое большое второе число и третье число ");
+        } else if (one > two && one > three) {
             System.out.println(one + " самое большое первое число ");
         } else if (two > three) {
             System.out.println(two + " самое большое второе число ");
@@ -201,5 +208,4 @@ public class Main {
             System.out.println(three + " самое большое третье число ");
         }
     }
-
 }
