@@ -199,25 +199,27 @@ public class Main {
 
     private static void task7() {
         System.out.println("Задача 7");
-        method7(5, 7, 10);
         method7(11, 7, 10);
         method7(5, 11, 10);
         method7(5, 7, 11);
         method7(10, 5, 10);
-        method7(2, 1, 1);
+        method7(1, 1, 1);
+        method7(1, 2, 2);
+        method7(2, 1, 2);
+        method7(2, 2, 1);
     }
 
     public static void method7(int one, int two, int three) {
         if (one == two && one == three) {
-            System.out.println("все числа равны");
+            System.out.println(one + " все числа равны");
         } else if (one > three && one == two) {
-            System.out.println(one + "," + two + " самое большое первое число и второе число");
+            System.out.println(one + " самое большое первое число и второе число");
         } else if (one > two && one == three) {
-            System.out.println(one + "," + three + " самое большое первое число и третье число");
+            System.out.println(one + " самое большое первое число и третье число");
         } else if (one > two && one > three) {
             System.out.println(one + " самое большое первое число");
         } else if (two == three) {
-            System.out.println(two + "," + three + " самое большое второе число и третье число");
+            System.out.println(two + " самое большое второе число и третье число");
         } else if (two > three) {
             System.out.println(two + " самое большое второе число");
         } else {
