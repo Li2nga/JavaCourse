@@ -25,9 +25,10 @@ public class Main {
         if (age < 0) {
             throw new IllegalArgumentException("Невозможный возраст");
         }
+        System.out.print("Если возраст человека равен " + age);
         System.out.println(age < 18
-                ? "Если возраст человека равен " + age + ", нужно немного подождать."
-                : "Если возраст человека равен " + age + ", то он совершеннолетний.");
+                ?", нужно немного подождать."
+                :", то он совершеннолетний.");
     }
 
     public static void task2() {
@@ -47,9 +48,10 @@ public class Main {
         if (outsideAirTemperature < -273) {
             throw new IllegalArgumentException("Несуществующая температура в градусах по Цельсию");
         }
+        System.out.print("На улице " + outsideAirTemperature + " градусов - ");
         System.out.println(outsideAirTemperature < 5
-                ? "На улице " + outsideAirTemperature + " градусов -  нужно надеть шапку"
-                : "На улице " + outsideAirTemperature + " градусов -  можно идти без шапки");
+                ?"нужно надеть шапку"
+                :"можно идти без шапки");
     }
 
     public static void task3() {
@@ -69,9 +71,10 @@ public class Main {
         if (carSpeed < 0) {
             throw new IllegalArgumentException("Несуществующая скорость");
         }
+        System.out.print("Если скорость " + carSpeed + " км/ч, то ");
         System.out.println(carSpeed <= 60
-                ? "Если скорость " + carSpeed + " км/ч, то можно ездить спокойно"
-                : "Если скорость " + carSpeed + " км/ч, то  придется заплатить штраф");
+                ?"можно ездить спокойно"
+                :"придется заплатить штраф");
     }
 
     public static void task4() {
