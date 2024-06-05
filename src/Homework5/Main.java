@@ -113,17 +113,18 @@ public class Main {
 
     public static void method4(int deliveryDistance) {
         int deliveryTime = 1;
+        System.out.println(deliveryDistance);
         if (deliveryDistance > 20) {
             deliveryTime++;
-            System.out.println("Потребуется дней: " + deliveryTime);
-        }  if (deliveryDistance > 60) {
+        }
+        if (deliveryDistance > 60) {
             deliveryTime++;
-            System.out.println("Потребуется дней: " + deliveryTime);
-        } if (deliveryDistance > 100) {
-            System.out.println("Потребуется дней: " + deliveryTime++);
-        }else {
+        }
+        if (deliveryDistance > 100) {
             System.out.println("Доставки нет");
-              };
+        } else {
+            System.out.println("Потребуется дней: " + deliveryTime);
+        }
 
     }
 
