@@ -125,9 +125,7 @@ public class Main {
         } else {
             System.out.println("Потребуется дней: " + deliveryTime);
         }
-
     }
-
 }
 
 
