@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
-//        task3();
-//        task4();
+        task3();
+        task4();
 //        task5();
     }
 
@@ -40,9 +40,8 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
         try {
-            method2(-1,2015);
-        }
-        catch (IllegalArgumentException e) {
+            method2(-1, 2015);
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
 
@@ -68,46 +67,69 @@ public class Main {
 
         }
     }
+
+
+    public static void task3() {
+        System.out.println("Задача 3");
+        try {
+            method3(1200);
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        method3(2023);
+        method3(2024);
+        method3(2000);
+        method3(1900);
+        method3(2030);
+    }
+
+
+    public static void method3(int year) {
+        int yearException = 400;
+        int yearException2 = 100;
+        int yearException3 = 4;
+        if (year < 1584) {
+            throw new IllegalArgumentException("Неподходящее значение");
+        }
+        System.out.println(
+                year % yearException == 0 ? "год  является високосным" :
+                        (year % yearException3 == 0 && year % yearException2 != 0) ?
+                                "год  является високосным" : "год не является  високосным");
+    }
+
+
+    public static void task4() {
+        System.out.println("Задача 4");
+        method4(0);
+        method4(10);
+        method4(20);
+        method4(30);
+        method4(60);
+        method4(80);
+        method4(100);
+        method4(110);
+    }
+
+    public static void method4(int deliveryDistance) {
+        int deliveryTime = 1;
+        if (deliveryDistance > 20) {
+            deliveryTime++;
+            System.out.println("Потребуется дней: " + deliveryTime);
+        }  if (deliveryDistance > 60) {
+            deliveryTime++;
+            System.out.println("Потребуется дней: " + deliveryTime);
+        } if (deliveryDistance > 100) {
+            System.out.println("Потребуется дней: " + deliveryTime++);
+        }else {
+            System.out.println("Доставки нет");
+              };
+
+    }
+
 }
-//        int clientOS = 1;
-//        int clientDeviceYear = 2015;
-//        if (clientOS == 0) {
-//            if (clientDeviceYear < 2015) {
-//                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-//            } else {
-//                System.out.println("Установите версию приложения для iOS по ссылке");
-//            }
-//        }
-//        if (clientOS == 1) {
-//            if (clientDeviceYear < 2015) {
-//                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-//            } else {
-//                System.out.println("Установите версию приложения для для Android по ссылке");
-//            }
-//        }
-//    }
-//
-//    public static void task3() {
-//        System.out.println("Задача 3");
-//        int year = 2024;
-//        int yearException = 400;
-//        int yearException2 = 100;
-//        int yearException3 = 4;
-//
-//
-//        if (year % yearException == 0) {
-//            System.out.println("год  является високосным");
-//        } else if (year % yearException3 == 0 && year % yearException2 != 0) {
-//            System.out.println("год  является  високосным");
-//        } else {
-//            System.out.println("год не является  високосным");
-//        }
-//    }
-//
-//    public static void task4() {
-//        System.out.println("Задача 4");
-//        int deliveryDistance = 10;
-//        int deliveryTime = 0;
+
+
 //
 //        deliveryTime++;
 //
