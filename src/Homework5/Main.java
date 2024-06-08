@@ -25,7 +25,6 @@ public class Main {
         }
         method1(0);
         method1(1);
-
     }
 
     public static void method1(int clientOS) {
@@ -96,16 +95,13 @@ public class Main {
     }
 
     public static void method3(int year) {
-        int yearException = 400;
-        int yearException2 = 100;
-        int yearException3 = 4;
         if (year < 1584) {
             throw new IllegalArgumentException("Неподходящее значение");
         }
         System.out.println(
-                year % yearException == 0 ? "год  является високосным" :
-                        (year % yearException3 == 0 && year % yearException2 != 0) ?
-                                "год  является високосным" : "год не является  високосным");
+                year % 400 == 0 ? "год является високосным" :
+                        year % 4 == 0 && year % 100 != 0 ?
+                                "год является високосным" : "год не является високосным");
     }
 
     public static void task4() {
