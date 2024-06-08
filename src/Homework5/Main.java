@@ -1,12 +1,14 @@
 package Homework5;
 
+import java.time.YearMonth;
+
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
         task3();
         task4();
-//        task5();
+        task5();
     }
 
     public static void task1() {
@@ -36,7 +38,6 @@ public class Main {
                 : "Android по ссылке");
     }
 
-
     public static void task2() {
         System.out.println("Задача 2");
         try {
@@ -44,15 +45,28 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-
+        try {
+            method2(1, 2030);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            method2(1, 1999);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
         method2(1, 2014);
         method2(1, 2015);
         method2(0, 2014);
         method2(0, 2015);
-
+        method2(0, 2000);
     }
 
     public static void method2(int clientOS, int clientDeviceYear) {
+        int yearNow = YearMonth.now().getYear();
+        if (clientDeviceYear > yearNow || clientDeviceYear < 2000) {
+            throw new IllegalArgumentException("Неподходящее значение, выберите существующий год производства вашего устройства");
+        }
         if (clientOS != 0 && clientOS != 1) {
             throw new IllegalArgumentException("Неподходящее значение, выберите 0 или 1");
         }
@@ -64,16 +78,13 @@ public class Main {
             System.out.println(clientDeviceYear < 2015
                     ? "Установите облегченную версию приложения для Android по ссылке"
                     : "Установите версию приложения для Android по ссылке");
-
         }
     }
-
 
     public static void task3() {
         System.out.println("Задача 3");
         try {
             method3(1200);
-
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
@@ -83,7 +94,6 @@ public class Main {
         method3(1900);
         method3(2030);
     }
-
 
     public static void method3(int year) {
         int yearException = 400;
@@ -97,7 +107,6 @@ public class Main {
                         (year % yearException3 == 0 && year % yearException2 != 0) ?
                                 "год  является високосным" : "год не является  високосным");
     }
-
 
     public static void task4() {
         System.out.println("Задача 4");
@@ -126,51 +135,44 @@ public class Main {
             System.out.println("Потребуется дней: " + deliveryTime);
         }
     }
+
+    public static void task5() {
+        System.out.println("Задача 5");
+        try {
+            method5(13);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        method5(12);
+        method5(3);
+        method5(7);
+        method5(10);
+    }
+
+    public static void method5(int monthNumber) {
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                System.out.println("Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осень");
+                break;
+            default:
+                throw new IllegalArgumentException("Такого сезона не существует");
+        }
+    }
 }
-
-
-//
-//        deliveryTime++;
-//
-//        if (deliveryDistance >= 20) {
-//            deliveryTime++;
-//        }
-//        if (deliveryDistance >= 60) {
-//            deliveryTime++;
-//        }
-//        if (deliveryDistance > 100) {
-//            System.out.println("Доставки нет");
-//        } else {
-//            System.out.println("Потребуется дней: " + deliveryTime);
-//        }
-//    }
-//
-//    public static void task5() {
-//        System.out.println("Задача 5");
-//        int monthNumber = 12;
-//        switch (monthNumber) {
-//            case 1:
-//            case 2:
-//            case 12:
-//                System.out.println("Зима");
-//                break;
-//            case 3:
-//            case 4:
-//            case 5:
-//                System.out.println("Весна");
-//                break;
-//            case 6:
-//            case 7:
-//            case 8:
-//                System.out.println("Лето");
-//                break;
-//            case 9:
-//            case 10:
-//            case 11:
-//                System.out.println("Осень");
-//                break;
-//            default:
-//                System.out.println("Такого сезона не существует");
-//        }
-//    }
-//}
