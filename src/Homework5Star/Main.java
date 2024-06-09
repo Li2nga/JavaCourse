@@ -1,8 +1,12 @@
 package Homework5Star;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         task1();
+        task2();
     }
 
     public static void task1() {
@@ -28,5 +32,25 @@ public class Main {
         };
         System.out.println(season);
     }
-}
 
+    public static void task2() {
+        System.out.println("Задача 2");
+        System.out.println("Введите число:");
+        int number;
+        while (true) {
+            try {
+                Scanner sc = new Scanner(System.in);
+                number = sc.nextInt();
+                sc.close();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Введите число повторно:");
+            }
+        }
+        if (number >= 0 && number < 100) {
+            System.out.println("Спасибо! Вы ввели число " + number);
+        } else {
+            throw new IllegalArgumentException(number + " - число не в заданном диапазоне");
+        }
+    }
+}
