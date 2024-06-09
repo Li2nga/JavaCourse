@@ -47,7 +47,7 @@ public class Main {
                 System.out.println("Введите число повторно:");
             }
         }
-        if (number >= 0 && number < 100) {
+        if (number >= 0 && number <= 100) {
             System.out.println("Спасибо! Вы ввели число " + number);
         } else {
             throw new IllegalArgumentException(number + " - число не в заданном диапазоне");
