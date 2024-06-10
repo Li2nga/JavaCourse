@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static void task1() {
@@ -52,5 +53,28 @@ public class Main {
         } else {
             throw new IllegalArgumentException(number + " - число не в заданном диапазоне");
         }
+    }
+    public static void task3() {
+        System.out.println("Задача 3");
+        try {
+            method3(1200);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        method3(2023);
+        method3(2024);
+        method3(2000);
+        method3(1900);
+        method3(2030);
+    }
+
+    public static void method3(int year) {
+        if (year < 1584) {
+            throw new IllegalArgumentException("Неподходящее значение");
+        }
+        System.out.println(
+                year % 400 == 0 || year % 4 == 0 && year % 100 != 0
+                        ? "год является високосным"
+                        : "год не является високосным");
     }
 }
