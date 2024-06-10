@@ -54,6 +54,7 @@ public class Main {
             throw new IllegalArgumentException(number + " - число не в заданном диапазоне");
         }
     }
+
     public static void task3() {
         System.out.println("Задача 3");
         try {
