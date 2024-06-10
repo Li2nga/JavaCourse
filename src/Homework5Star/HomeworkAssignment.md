@@ -39,3 +39,31 @@ public class Main {
     }
 }
 ```
+---
+### Задача 3*
+Изменить 3ю задачу, поместив условие високосности в одно выражение.
+```java
+    public static void task3() {
+    System.out.println("Задача 3");
+    try {
+        method3(1200);
+    } catch (IllegalArgumentException e) {
+        System.out.println(e.getMessage());
+    }
+    method3(2023);
+    method3(2024);
+    method3(2000);
+    method3(1900);
+    method3(2030);
+}
+
+public static void method3(int year) {
+    if (year < 1584) {
+        throw new IllegalArgumentException("Неподходящее значение");
+    }
+    System.out.println(
+            year % 400 == 0 ? "год является високосным" :
+                    year % 4 == 0 && year % 100 != 0 ?
+                            "год является високосным" : "год не является високосным");
+}
+```
