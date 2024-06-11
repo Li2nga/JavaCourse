@@ -52,11 +52,11 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
-        int total = 15_000;
+        long total = 15_000_00;
         double percentageMonth = 0.07;
-        for (int i = 1; total < 12_000_000; i++) {
+        for (int i = 1; total < 12_000_000_00; i++) {
             total += Math.round(total * percentageMonth);
-            System.out.println(i + " " + total);
+            System.out.println(i + " " + total / 100);
         }
     }
 
@@ -70,7 +70,7 @@ public class Main {
             if (i % 6 == 0)
                 System.out.println(i + " " + total / 100);
         }
-        System.out.println("Итоговый месяц накоплений - " + i + "\n" + "Итоговая сумма накоплений - " + total / 100);
+        System.out.println("Итоговый месяц накоплений - " + (i - 1) + "\n" + "Итоговая сумма накоплений - " + total / 100);
     }
 
     public static void task6() {
@@ -84,6 +84,7 @@ public class Main {
             if (i % 6 == 0)
                 System.out.println(i + " " + total / 100);
         }
+        total += Math.round(total * percentageMonth);
         System.out.println("Итоговый месяц накоплений - " + i);
         System.out.println("Итоговая сумма накоплений - " + total / 100);
     }
