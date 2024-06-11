@@ -44,9 +44,9 @@ public class Main {
         double birthRate = 0.017;
         double populationMortality = 0.008;
         double populationGrowth = birthRate - populationMortality;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             population += Math.round(population * populationGrowth);
-            System.out.println("Год " + (i + 1) + " численность населения составляет " + population);
+            System.out.println("Год " + i + " численность населения составляет " + population);
         }
     }
 
@@ -64,32 +64,35 @@ public class Main {
         System.out.println("Задача 5");
         long total = 15_000_00;
         double percentageMonth = 0.07;
-        for (int i = 1; total < 12_000_000_00; i++) {
+        int i = 1;
+        for (; total < 12_000_000_00; i++) {
             total += Math.round(total * percentageMonth);
             if (i % 6 == 0)
                 System.out.println(i + " " + total / 100);
         }
+        System.out.println("Итоговый месяц накоплений - " + i + "\n" + "Итоговая сумма накоплений - " + total / 100);
     }
 
     public static void task6() {
         System.out.println("Задача 6");
         long total = 15_000_00;
         double percentageMonth = 0.07;
-        for (int i = 1; i <= 9 * 12; i++) {
+        int savingsPeriod = 9 * 12;
+        int i = 1;
+        for (; i <= savingsPeriod - 1; i++) {
             total += Math.round(total * percentageMonth);
             if (i % 6 == 0)
                 System.out.println(i + " " + total / 100);
         }
-        System.out.println(total / 100);
+        System.out.println("Итоговый месяц накоплений - " + i);
+        System.out.println("Итоговая сумма накоплений - " + total / 100);
     }
 
     public static void task7() {
         System.out.println("Задача 7");
         int firstFridayMonth = 6;
-        for (int i = 1; i <= 31; i++) {
-            if (i % 7 == firstFridayMonth) {
-                System.out.println("Сегодня пятница " + i + "-е число. Необходимо подготовить отчет");
-            }
+        for (int i = firstFridayMonth; i <= 31; i += 7) {
+            System.out.println("Сегодня пятница " + i + "-е число. Необходимо подготовить отчет");
         }
     }
 
@@ -98,10 +101,14 @@ public class Main {
         int thisYear = 2024;
         int pastPeriod = 200;
         int futurePeriod = 100;
-        for (int i = thisYear - pastPeriod; i <= thisYear + futurePeriod; i++) {
+        int i = thisYear - pastPeriod;
+        for (; i <= thisYear + futurePeriod; i++) {
             if (i % 79 == 0) {
-                System.out.println(i);
+                break;
             }
+        }
+        for (; i <= thisYear + futurePeriod; i += 79) {
+            System.out.println(i);
         }
     }
 }
