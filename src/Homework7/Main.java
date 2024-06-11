@@ -67,7 +67,7 @@ public class Main {
         int i = 1;
         for (; total < 12_000_000_00; i++) {
             total += Math.round(total * percentageMonth);
-            if (i % 6 == 0)
+            if (i % 6 == 0 && total < 12_000_000_00)
                 System.out.println(i + " " + total / 100);
         }
         System.out.println("Итоговый месяц накоплений - " + (i - 1) + "\n" + "Итоговая сумма накоплений - " + total / 100);
