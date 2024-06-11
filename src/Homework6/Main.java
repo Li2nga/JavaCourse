@@ -16,14 +16,14 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1");
-        for (int i = 0; i < 10; i++) {
-            System.out.println(i + 1);
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
         }
     }
 
     public static void task2() {
         System.out.println("Задача 2");
-        for (int i = 10; i > 0; i--) {
+        for (int i = 10; i >= 1; i--) {
             System.out.println(i);
         }
     }
@@ -57,7 +57,7 @@ public class Main {
     }
 
     public static void task7() {
-        System.out.println("\nЗадача 7");
+        System.out.println("Задача 7");
         for (int i = 1; i <= 512; i *= 2) {
             System.out.println(i);
         }
