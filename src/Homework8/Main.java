@@ -15,7 +15,7 @@ public class Main {
 
         int[] weight = new int[]{1, 2, 3};
         double[] numbers = {1.57, 7.654, 9.986};
-        long[] weights = {13, 1, 9876, 11111111, 67543234};
+        long[] weights = {13, 1, 90, 3456789, 908975563};
     }
 
     public static void task2() {
@@ -33,13 +33,11 @@ public class Main {
         }
         System.out.println(numbers[numbers.length - 1]);
 
-        long[] weights = new long[5];
-        weights = new long[]{13, 1, 90, 3456789, 908975563};
-        System.out.println(Arrays.toString(weights));
+        long[] weights = {13, 1, 90, 3456789, 908975563};
         for (int i = 0; i < weights.length - 1; i++) {
             System.out.print(weights[i] + ",");
         }
-        System.out.println(numbers[weights.length - 1]);
+        System.out.println(weights[weights.length - 1]);
     }
 
     public static void task3() {
@@ -50,15 +48,13 @@ public class Main {
         }
         System.out.println(weight[0]);
 
-
         double[] numbers = {1.57, 7.654, 9.986};
         for (int i = 0; i < numbers.length - 1; i++) {
             System.out.print(numbers[numbers.length - 1 - i] + ",");
         }
         System.out.println(numbers[0]);
 
-
-        long[] weights = {13, 1, 9876, 11111111, 67543234};
+        long[] weights = {13, 1, 90, 3456789, 908975563};
         for (int i = 0; i < weights.length - 1; i++) {
             System.out.print(weights[weights.length - 1 - i] + ",");
         }
