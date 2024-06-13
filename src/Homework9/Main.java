@@ -57,8 +57,7 @@ public class Main {
             sum += i;
         }
         double averageSpending = (double) sum / arr.length;
-        System.out.printf("Средняя сумма трат за месяц составила %.2f", averageSpending / 100);
-        System.out.println(" рублей");
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей\n", averageSpending / 100);
     }
 
     public static void task4() {
