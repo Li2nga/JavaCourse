@@ -10,9 +10,19 @@ public class Main {
         task4();
     }
 
+    public static int[] generateRandomArray() {
+        java.util.Random random = new java.util.Random();
+        int[] arr = new int[5];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(100_000) + 100_000;
+        }
+        return arr;
+    }
+
     public static void task1() {
         System.out.println("Задача 1");
-        int[] arr = {50000, 60000, 45000, 37000, 70000};
+        int[] arr = generateRandomArray();
+        System.out.println(Arrays.toString(arr));
         int sum = 0;
         for (int i : arr) {
             sum += i;
@@ -22,7 +32,8 @@ public class Main {
 
     public static void task2() {
         System.out.println("Задача 2");
-        int[] arr = {50000, 60000, 45000, 37000, 70000};
+        int[] arr = generateRandomArray();
+        System.out.println(Arrays.toString(arr));
         int maximumValue = 0;
         for (int i : arr) {
             if (i > maximumValue) {
@@ -37,12 +48,12 @@ public class Main {
             }
         }
         System.out.println("Минимальная сумма трат за неделю составила " + minValue + " рублей");
-        System.out.println(Arrays.toString(arr));
     }
 
     public static void task3() {
         System.out.println("Задача 3");
-        int[] arr = {50000, 60000, 45000, 37000, 70000};
+        int[] arr = generateRandomArray();
+        System.out.println(Arrays.toString(arr));
         int sum = 0;
         for (int i : arr) {
             sum += i;
