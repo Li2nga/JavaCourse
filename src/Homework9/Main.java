@@ -14,7 +14,7 @@ public class Main {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[5];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(100_000) + 100_000;
+            arr[i] = random.nextInt(100_000_00) + 100_000_00;
         }
         return arr;
     }
@@ -27,7 +27,7 @@ public class Main {
         for (int i : arr) {
             sum += i;
         }
-        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+        System.out.println("Сумма трат за месяц составила " + sum / 100 + " рублей");
     }
 
     public static void task2() {
@@ -35,19 +35,17 @@ public class Main {
         int[] arr = generateRandomArray();
         System.out.println(Arrays.toString(arr));
         int maximumValue = 0;
-        for (int i : arr) {
-            if (i > maximumValue) {
-                maximumValue = i;
-            }
-        }
-        System.out.println("Максимальная сумма трат за неделю составила " + maximumValue + " рублей");
         int minValue = arr[0];
         for (int i : arr) {
             if (i < minValue) {
                 minValue = i;
             }
+            if (i > maximumValue) {
+                maximumValue = i;
+            }
         }
-        System.out.println("Минимальная сумма трат за неделю составила " + minValue + " рублей");
+        System.out.println("Минимальная сумма трат за неделю составила " + minValue / 100 + " рублей");
+        System.out.println("Максимальная сумма трат за неделю составила " + maximumValue / 100 + " рублей");
     }
 
     public static void task3() {
@@ -59,7 +57,7 @@ public class Main {
             sum += i;
         }
         double averageSpending = Math.round((double) sum / arr.length);
-        System.out.println("Средняя сумма трат за месяц составила " + averageSpending + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + (int) averageSpending / 100 + " рублей");
     }
 
     public static void task4() {
