@@ -21,7 +21,7 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
 
-        int[] weight = new int[]{1, 2, 3};
+        int[] weight = {1, 2, 3};
         for (int i = 0; i < weight.length - 1; i++) {
             System.out.print(weight[i] + ",");
         }
@@ -42,7 +42,7 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
-        int[] weight = new int[]{1, 2, 3};
+        int[] weight = {1, 2, 3};
         for (int i = 0; i < weight.length - 1; i++) {
             System.out.print(weight[weight.length - 1 - i] + ",");
         }
