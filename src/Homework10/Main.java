@@ -5,6 +5,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
@@ -26,5 +27,16 @@ public class Main {
         System.out.println("Задача 3");
         String fullName = "Иванов Семён Семёнович";
         System.out.println("Данные ФИО сотрудника — " + fullName.replace("ё", "е"));
+    }
+
+    public static void task4() {
+        System.out.println("Задача 4");
+        for (int i = 0; i <= 0b11111111_11111111; i++) {
+            if (i % 75 == 0) {
+                System.out.println();
+                System.out.print(i + ": ");
+            }
+            System.out.print((char) i);
+        }
     }
 }
