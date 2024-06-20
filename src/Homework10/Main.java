@@ -5,7 +5,7 @@ public class Main {
         task1();
         task2();
         task3();
-        task4();
+        task4Star();
     }
 
     public static void task1() {
@@ -29,8 +29,8 @@ public class Main {
         System.out.println("Данные ФИО сотрудника — " + fullName.replace("ё", "е"));
     }
 
-    public static void task4() {
-        System.out.println("Задача 4");
+    public static void task4Star() {
+        System.out.println("Задача 4Star");
         for (int i = 0; i <= 0b11111111_11111111; i++) {
             if (i % 75 == 0) {
                 System.out.println();
