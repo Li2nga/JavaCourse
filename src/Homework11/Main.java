@@ -4,9 +4,9 @@ import java.time.YearMonth;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
+        //task1();
         task2();
-        task3();
+        //task3();
     }
 
     public static void task1() {
@@ -66,15 +66,18 @@ public class Main {
         if (clientOS != 0 && clientOS != 1) {
             throw new IllegalArgumentException("Неподходящее значение, выберите 0 или 1");
         }
-        if (clientOS == 0) {
-            System.out.println(clientDeviceYear < 2015
-                    ? "Установите облегченную версию приложения для iOS по ссылке"
-                    : "Установите версию приложения для iOS по ссылке");
-        } else {
-            System.out.println(clientDeviceYear < 2015
-                    ? "Установите облегченную версию приложения для Android по ссылке"
-                    : "Установите версию приложения для Android по ссылке");
-        }
+        String versionOS = clientDeviceYear < 2015 ? "облегченную " : "";
+        String oS = clientOS == 0 ? "iOS" : "Android";
+        System.out.println("Установитe " + versionOS + "версию приложения для " + oS + " по ссылке");
+//        if (clientOS == 0) {
+//            System.out.println(clientDeviceYear < 2015
+//                    ? "Установите облегченную версию приложения для iOS по ссылке"
+//                    : "Установите версию приложения для iOS по ссылке");
+//        } else {
+//            System.out.println(clientDeviceYear < 2015
+//                    ? "Установите облегченную версию приложения для Android по ссылке"
+//                    : "Установите версию приложения для Android по ссылке");
+//        }
     }
 
     public static void task3() {
