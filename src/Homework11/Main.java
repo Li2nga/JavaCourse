@@ -4,9 +4,9 @@ import java.time.YearMonth;
 
 public class Main {
     public static void main(String[] args) {
-        //task1();
+        task1();
         task2();
-        //task3();
+        task3();
     }
 
     public static void task1() {
@@ -23,8 +23,7 @@ public class Main {
         leapYearSearch(2030);
     }
 
-    public static void
-    leapYearSearch(int year) {
+    public static void leapYearSearch(int year) {
         if (year < 1584) {
             throw new IllegalArgumentException("Неподходящее значение");
         }
