@@ -13,16 +13,11 @@ public class Main {
         Book b2 = new Book("Название2", a2, 1956);
 
         System.out.println("b1.getTitle() = " + b1.getTitle());
-        System.out.println("b1.getAuthor() = " + b1.getAuthor().getName());
+        System.out.println("b1.getAuthor() = " + b1.getAuthor());
         System.out.println("b1.getPublishingYear() = " + b1.getPublishingYear());
         b1.setPublishingYear(1800);
         System.out.println("b1.getPublishingYear() = " + b1.getPublishingYear());
-        System.out.println(b1);
         System.out.println("b1 = " + b1);
         System.out.println("b2 = " + b2);
-        System.out.println("-------------------------");
-        Author a3 = new Author("Имя3", "Фамилия3");
-        Book b3 = new Book("Название1", a3, 2000);
-        System.out.println(b1.equals(b3));
     }
 }
