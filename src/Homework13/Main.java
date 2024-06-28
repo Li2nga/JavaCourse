@@ -22,5 +22,9 @@ public class Main {
         System.out.println("b1.getPublishingYear() = " + b1.getPublishingYear());
         System.out.println("b1 = " + b1);
         System.out.println("b2 = " + b2);
+        System.out.println("a1.equals(a2) = " + a1.equals(a2));
+        System.out.println("b1.equals(b2) = " + b1.equals(b2));
+        Book b3 = new Book("Название2", a2, 1956);
+        System.out.println("b3.equals(b2) = " + b3.equals(b2));
     }
 }

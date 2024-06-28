@@ -1,5 +1,7 @@
 package Homework13;
 
+import java.util.Objects;
+
 public class Book {
     private String title;
     private Author author;
@@ -30,5 +32,17 @@ public class Book {
     @Override
     public String toString() {
         return (title + "; " + author + "; " + publishingYear);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book book)) return false;
+        return getPublishingYear() == book.getPublishingYear() && Objects.equals(getTitle(), book.getTitle()) && Objects.equals(getAuthor(), book.getAuthor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTitle(), getAuthor(), getPublishingYear());
     }
 }
