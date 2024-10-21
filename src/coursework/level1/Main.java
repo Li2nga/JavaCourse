@@ -11,7 +11,7 @@ public class Main {
         employees[3] = new Employee("Петров П.П.", 4, 60000_00);
         employees[4] = new Employee("Сидоров А.В.", 5, 65000_00);
         employees[5] = new Employee("Белкин Б.Б.", 1, 41000_00);
-        employees[6] = new Employee("Белов С.А.", 2, 63000_00);
+        // employees[6] = new Employee("Белов С.А.", 2, 63000_00);
         employees[7] = new Employee("Власова А.А.", 3, 55000_00);
         employees[8] = new Employee("Гайдукова Г.В.", 4, 47000_00);
         employees[9] = new Employee("Кузнецова Н.В.", 5, 70000_00);

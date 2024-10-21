@@ -4,7 +4,9 @@ public class EmployeeService {
     public static long sumSalaryEmployee(Employee[] employees) {
         long sum = 0;
         for (Employee i : employees) {
-            sum += i.getSalary();
+            if (i != null) {
+                sum += i.getSalary();
+            }
         }
         return sum;
     }
@@ -73,7 +75,9 @@ public class EmployeeService {
 
     public static void printEmployee(Employee[] employees) {
         for (int i = 0; i < employees.length; i++) {
-            System.out.println(STR."\{i}: \{employees[i].getFullName()}");
+            if (employees[i] != null) {
+                System.out.println(STR."\{i}: \{employees[i].getFullName()}");
+            } else System.out.println(STR."\{i}: пусто");
         }
     }
 }

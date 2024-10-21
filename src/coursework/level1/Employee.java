@@ -5,7 +5,7 @@ public class Employee {
     private final String fullName;
     private int department;
     private int salary;
-    private int id;
+    private final int id;
 
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
@@ -24,6 +24,10 @@ public class Employee {
 
     public int getSalary() {
         return salary;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setDepartment(int department) {
