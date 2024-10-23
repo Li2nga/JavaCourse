@@ -39,9 +39,9 @@ public class Main {
         System.out.println("------------------------------------------------");
         EmployeeService.printEmployeesDepartment(employees, 3);
         System.out.println("------------------------------------------------");
-        EmployeeService.printEemployeesLessSalary(employees, 6500000);
+        EmployeeService.printEmployeesLessSalary(employees, 6500000);
         System.out.println("------------------------------------------------");
-        EmployeeService.printEemployeesHigherSalary(employees, 65000_00);
+        EmployeeService.printEmployeesHigherSalary(employees, 65000_00);
 
     }
 }

@@ -162,16 +162,21 @@ public class EmployeeService {
     }
 
     public static void printEmployeesDepartment(Employee[] employees, int department) {
+        boolean empty = true;
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
                 if (employees[i].getDepartment() == department) {
                     System.out.println(STR."\{i}: \{employees[i].toStringWithoutDepartment()}");
-                } else System.out.println(STR."\{i}: пусто");
+                    empty = false;
+                }
             }
+        }
+        if (empty) {
+            System.out.println("Таких сотрудников нет");
         }
     }
 
-    public static void printEemployeesLessSalary(Employee[] employees, long targetSalary) {
+    public static void printEmployeesLessSalary(Employee[] employees, long targetSalary) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getSalary() < targetSalary) {
                 System.out.println(STR."\{i}: \{employees[i].toStringWithoutDepartment()}");
@@ -179,9 +184,9 @@ public class EmployeeService {
         }
     }
 
-    public static void printEemployeesHigherSalary(Employee[] employees, long targetSalary) {
+    public static void printEmployeesHigherSalary(Employee[] employees, long targetSalary) {
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null && employees[i].getSalary() > targetSalary) {
+            if (employees[i] != null && employees[i].getSalary() >= targetSalary) {
                 System.out.println(STR."\{i}: \{employees[i].toStringWithoutDepartment()}");
             }
         }
