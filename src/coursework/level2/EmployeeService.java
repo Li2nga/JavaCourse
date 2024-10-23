@@ -164,11 +164,9 @@ public class EmployeeService {
     public static void printEmployeesDepartment(Employee[] employees, int department) {
         boolean empty = true;
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
-                if (employees[i].getDepartment() == department) {
-                    System.out.println(STR."\{i}: \{employees[i].toStringWithoutDepartment()}");
-                    empty = false;
-                }
+            if (employees[i] != null && employees[i].getDepartment() == department) {
+                System.out.println(STR."\{i}: \{employees[i].toStringWithoutDepartment()}");
+                empty = false;
             }
         }
         if (empty) {
@@ -192,6 +190,3 @@ public class EmployeeService {
         }
     }
 }
-
-
-
