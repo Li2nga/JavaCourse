@@ -1,7 +1,5 @@
 package coursework.level3;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -13,8 +11,8 @@ public class Main {
         employeeBook.addNewEmployee("Сидоров А.В.", 5, 65000_00);
         employeeBook.addNewEmployee("Белкин Б.Б.", 1, 41000_00);
 
-
         System.out.println(employeeBook);
+        System.out.println("------------------------------------------------");
         employeeBook.deletingEmployee(5);
         System.out.println(employeeBook);
         employeeBook.changeEmployee(1, 43000_00, 1);
@@ -23,5 +21,12 @@ public class Main {
         employeeBook.printEmployeeDepartment(1);
         System.out.println("------------------------------------------------");
         employeeBook.printListEmployeesDepartment();
+        System.out.println("------------------------------------------------");
+        System.out.println(employeeBook.sumSalaryEmployee());
+        System.out.println("------------------------------------------------");
+        employeeBook.salaryIndexationDepartment(5, 10);
+        System.out.println("------------------------------------------------");
+        employeeBook.salaryIndexationDepartment(1, 10);
+        System.out.println(employeeBook);
     }
 }
