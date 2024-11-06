@@ -12,18 +12,6 @@ public class Gryffindor extends Hogwarts {
         this.courage = courage;
     }
 
-    public int getNobility() {
-        return nobility;
-    }
-
-    public int getHonor() {
-        return honor;
-    }
-
-    public int getCourage() {
-        return courage;
-    }
-
     @Override
     public String toString() {
         return

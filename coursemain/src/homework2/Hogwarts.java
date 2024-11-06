@@ -15,14 +15,6 @@ public abstract class Hogwarts {
         return name;
     }
 
-    public int getSpellPower() {
-        return spellPower;
-    }
-
-    public int getApparitionDistance() {
-        return apparitionDistance;
-    }
-
     @Override
     public String toString() {
         return "Hogwarts{" +

@@ -27,30 +27,31 @@ public class Main {
         System.out.println(grahamMontague);
         System.out.println(gregoryGoyle);
         System.out.println("---------------------------------------------------------------------");
+
         System.out.println("Gryffindor");
         harryPotter.comparisonGryffindorStudents(hermioneGranger);
         harryPotter.comparisonGryffindorStudents(ronaldWeasley);
         ronaldWeasley.comparisonGryffindorStudents(hermioneGranger);
-        System.out.println(" ");
+        System.out.println();
         System.out.println("Hufflepuff");
 
         zachariasSmith.comparisonHufflepuffStudents(cedricDiggory);
         cedricDiggory.comparisonHufflepuffStudents(justinFinchFletchley);
         justinFinchFletchley.comparisonHufflepuffStudents(zachariasSmith);
-        System.out.println(" ");
-        System.out.println("Ravenclaw");
+        System.out.println();
 
+        System.out.println("Ravenclaw");
         choChang.comparisonRavenclawStudents(padmaPatil);
         padmaPatil.comparisonRavenclawStudents(marcusBelby);
         marcusBelby.comparisonRavenclawStudents(choChang);
-        System.out.println(" ");
-        System.out.println("Slytherin");
+        System.out.println();
 
+        System.out.println("Slytherin");
         dracoMalfoy.comparisonSlytherinStudents(grahamMontague);
         grahamMontague.comparisonSlytherinStudents(gregoryGoyle);
         gregoryGoyle.comparisonSlytherinStudents(dracoMalfoy);
+        System.out.println();
 
-        System.out.println(" ");
         System.out.println("Hogwarts");
         harryPotter.bestStudentHogwarts(dracoMalfoy);
     }

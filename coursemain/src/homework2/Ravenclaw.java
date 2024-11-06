@@ -14,22 +14,6 @@ public class Ravenclaw extends Hogwarts {
         this.wit = wit;
     }
 
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public int getKnowledge() {
-        return knowledge;
-    }
-
-    public int getCreativity() {
-        return creativity;
-    }
-
-    public int getWit() {
-        return wit;
-    }
-
     @Override
     public String toString() {
         return "Ravenclaw" + super.toString() + "{" +

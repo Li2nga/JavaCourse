@@ -12,18 +12,6 @@ public class Hufflepuff extends Hogwarts {
         this.fairPlay = fairPlay;
     }
 
-    public int getHardWork() {
-        return hardWork;
-    }
-
-    public int getLoyalty() {
-        return loyalty;
-    }
-
-    public int getFairPlay() {
-        return fairPlay;
-    }
-
     @Override
     public String toString() {
         return "Hufflepuff" + super.toString() + "{" +
