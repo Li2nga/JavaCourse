@@ -31,4 +31,14 @@ public abstract class Hogwarts {
                 ", apparitionDistance=" + apparitionDistance +
                 '}';
     }
+
+    public void bestStudentHogwarts(Hogwarts hogwarts) {
+        if (spellPower + apparitionDistance > hogwarts.spellPower + hogwarts.apparitionDistance) {
+            System.out.println("Ученик " + getName() + " сильнее ученика " + hogwarts.getName());
+        } else if (spellPower + apparitionDistance < hogwarts.spellPower + hogwarts.apparitionDistance) {
+            System.out.println("Ученик " + hogwarts.getName() + " сильнее ученика " + getName());
+        } else {
+            System.out.println("Силы учеников " + hogwarts.getName() + " и " + getName() + " равны ");
+        }
+    }
 }

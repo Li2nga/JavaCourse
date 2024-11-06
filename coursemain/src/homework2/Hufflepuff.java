@@ -26,10 +26,26 @@ public class Hufflepuff extends Hogwarts {
 
     @Override
     public String toString() {
-        return "Hufflepuff{" +
+        return "Hufflepuff" + super.toString() + "{" +
                 "hardWork=" + hardWork +
                 ", loyalty=" + loyalty +
                 ", fairPlay=" + fairPlay +
                 '}';
+    }
+
+    public void comparisonHufflepuffStudents(Hufflepuff hufflepuff) {
+
+        if (sumPoints() > hufflepuff.sumPoints()) {
+            System.out.println("Лучший ученик - " + getName());
+        } else if (sumPoints() == hufflepuff.sumPoints()) {
+            System.out.println("Силы учеников " + hufflepuff.getName() + " и " + getName() + " равны");
+        } else {
+            System.out.println("Лучший ученик - " + hufflepuff.getName());
+        }
+
+    }
+
+    private int sumPoints() {
+        return hardWork + loyalty + fairPlay;
     }
 }

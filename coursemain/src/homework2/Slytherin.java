@@ -1,6 +1,6 @@
 package homework2;
 
-public class Slytherin extends Hogwarts{
+public class Slytherin extends Hogwarts {
     private final int cunning;
     private final int determination;
     private final int ambition;
@@ -39,12 +39,27 @@ public class Slytherin extends Hogwarts{
 
     @Override
     public String toString() {
-        return "Slytherin{" +
+        return "Slytherin" + super.toString() + "{" +
                 "cunning=" + cunning +
                 ", determination=" + determination +
                 ", ambition=" + ambition +
                 ", resourcefulness=" + resourcefulness +
                 ", leadership=" + leadership +
-                "} " + super.toString();
+                '}';
+    }
+
+    public void comparisonSlytherinStudents(Slytherin slytherin) {
+        if (sumPoints() > slytherin.sumPoints()) {
+            System.out.println("Лучший ученик - " + getName());
+        } else if (sumPoints() == slytherin.sumPoints()) {
+            System.out.println("Силы учеников " + slytherin.getName() + " и " + getName() + " равны");
+        } else {
+            System.out.println("Лучший ученик - " + slytherin.getName());
+        }
+
+    }
+
+    private int sumPoints() {
+        return cunning + determination + ambition + resourcefulness + leadership;
     }
 }
