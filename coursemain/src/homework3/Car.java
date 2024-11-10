@@ -1,12 +1,13 @@
 package homework3;
 
-public class Car {
+public class Car extends Bicycle {
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
 
-    public String modelName;
-    public int wheelsCount;
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public void check() {
+        super.check();
+        checkEngine();
     }
 
     public void checkEngine() {
