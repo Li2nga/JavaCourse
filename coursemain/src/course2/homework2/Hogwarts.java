@@ -1,4 +1,4 @@
-package homework2;
+package course2.homework2;
 
 public abstract class Hogwarts {
     private final String name;

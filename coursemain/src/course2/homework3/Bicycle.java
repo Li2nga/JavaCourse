@@ -1,4 +1,4 @@
-package homework3;
+package course2.homework3;
 
 public class Bicycle implements Vehicle {
     private final String modelName;

@@ -1,4 +1,4 @@
-package homework2;
+package course2.homework2;
 
 public class Slytherin extends Hogwarts {
     private final int cunning;

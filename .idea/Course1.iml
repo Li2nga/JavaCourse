@@ -2,8 +2,8 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_21_PREVIEW" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/course1">
-      <sourceFolder url="file://$MODULE_DIR$/course1/src" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/coursemain/src/course1">
+      <sourceFolder url="file://$MODULE_DIR$/coursemain/src/course1/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="openjdk-21" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

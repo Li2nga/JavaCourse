@@ -1,4 +1,4 @@
-package homework3;
+package course2.homework3;
 
 public class Truck extends Car {
     public Truck(String modelName, int wheelsCount) {
