@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Compiled files ###
+coursemain/src/course2/homework4/target

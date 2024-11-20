@@ -4,8 +4,14 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/coursemain/src/homework4/pom.xml" />
+        <option value="$PROJECT_DIR$/coursemain/src/course2/Calculator/pom.xml" />
+        <option value="$PROJECT_DIR$/coursemain/src/course2/homework4/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/coursemain/src/course2/Calculator/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
