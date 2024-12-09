@@ -29,13 +29,35 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(check("java1",
-                "K_3rtyu", "K_3rtyu"));
+        try {
+            System.out.println(check("java1",
+                    "K_3rtyu", "K_3rtyu"));
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        try {
+            System.out.println(check("java",
+                    "K_3rtyu", "K_3rtyu"));
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
+        }
         try {
             System.out.println(check("java2",
                     "K_3rt'yu", "K_3rt'yu"));
         } catch (WrongLoginException | WrongPasswordException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        try {
+            System.out.println(check("java3",
+                    "K_3rtyu", "K_3rtyyu"));
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        try {
+            System.out.println(check("jv>4",
+                    "K_3rt'yu", "K_3rt'yyu"));
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
         }
     }
 }
